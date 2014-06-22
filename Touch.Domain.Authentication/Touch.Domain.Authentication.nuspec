@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Touch.Domain.Authentication</id>
+        <version>1.0.0</version>
+        <authors>Artem Abashev</authors>
+        <projectUrl>https://github.com/Touch-SDK/Touch.Business</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Authentication business entities for Touch SDK.</description>
+        <dependencies>
+            <dependency id="Touch" version="1.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\Touch.Domain.Authentication.dll" target="lib\Touch.Domain.Authentication.dll" />
+        <file src="bin\Release\Touch.Domain.Authentication.pdb" target="lib\Touch.Domain.Authentication.pdb" />
+    </files>
+</package>
