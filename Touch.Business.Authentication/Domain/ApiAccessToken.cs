@@ -37,5 +37,10 @@ namespace Touch.Domain
         /// Token has been revoked.
         /// </summary>
         public virtual bool IsRevoked { get; set; }
+
+        /// <summary>
+        /// Roles.
+        /// </summary>
+        public virtual byte Roles { get; set; }
     }
 }

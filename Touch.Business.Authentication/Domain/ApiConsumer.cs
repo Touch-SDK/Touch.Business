@@ -18,8 +18,8 @@ namespace Touch.Domain
         public virtual string Secret { get; set; }
 
         /// <summary>
-        /// Default access token (optional).
+        /// Roles.
         /// </summary>
-        public virtual ApiAccessToken DefaultToken { get; set; }
+        public virtual byte Roles { get; set; }
     }
 }

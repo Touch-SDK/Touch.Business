@@ -6,7 +6,7 @@ namespace Touch.Domain
     /// <summary>
     /// User membership.
     /// </summary>
-    abstract public class UserMembership : Entity
+    public class UserMembership : Entity
     {
         public virtual string Password { get; set; }
 
