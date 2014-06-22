@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Touch.Business.Authentication</id>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <authors>Artem Abashev</authors>
         <projectUrl>https://github.com/Touch-SDK/Touch.Business</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,7 +12,7 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\Touch.Domain.Authentication.dll" target="lib\Touch.Domain.Authentication.dll" />
-        <file src="bin\Release\Touch.Domain.Authentication.pdb" target="lib\Touch.Domain.Authentication.pdb" />
+        <file src="bin\Release\Touch.Business.Authentication.dll" target="lib\Touch.Business.Authentication.dll" />
+        <file src="bin\Release\Touch.Business.Authentication.pdb" target="lib\Touch.Business.Authentication.pdb" />
     </files>
 </package>
