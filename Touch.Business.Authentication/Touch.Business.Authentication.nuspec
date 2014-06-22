@@ -8,7 +8,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Authentication business logic for Touch SDK.</description>
         <dependencies>
-            <dependency id="Touch" version="1.0.0" />
+            <dependency id="Touch" version="1.0.2" />
         </dependencies>
     </metadata>
     <files>
