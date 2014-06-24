@@ -34,17 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Domain\AccessToken.cs" />
-    <Compile Include="Domain\ApiAccessToken.cs" />
-    <Compile Include="Domain\ApiConsumer.cs" />
-    <Compile Include="Domain\ApiRequestToken.cs" />
     <Compile Include="Domain\Consumer.cs" />
     <Compile Include="Domain\Credentials.cs" />
     <Compile Include="Domain\KeyPair.cs" />
+    <Compile Include="Domain\Membership.cs" />
     <Compile Include="Domain\Nonce.cs" />
     <Compile Include="Domain\RequestToken.cs" />
-    <Compile Include="Domain\RequestTokenStatus.cs" />
-    <Compile Include="Domain\UserMembership.cs" />
     <Compile Include="Logic\AuthenticationLogic.cs" />
+    <Compile Include="Logic\MembershipLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IAuthenticationProvider.cs" />
   </ItemGroup>
