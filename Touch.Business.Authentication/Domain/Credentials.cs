@@ -10,7 +10,7 @@ namespace Touch.Domain
     /// OAuth credentials.
     /// </summary>
     [DataContract(Name = "Credentials")]
-    sealed public class Credentials
+    public class Credentials
     {
         /// <summary>
         /// Consumer key pair.
