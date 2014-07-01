@@ -10,9 +10,9 @@ namespace Touch.Logic
     public abstract class AuthenticationLogic : BusinessLogic
     {
         #region Dependencies
-        public IRepositoryProvider RepositoryProvider { private get; set; }
-        public IHashGenerator TokenHashGenerator { private get; set; }
-        public IEncryper TokenEncryper { private get; set; }
+        public IRepositoryProvider RepositoryProvider { protected get; set; }
+        public IHashGenerator TokenHashGenerator { protected get; set; }
+        public IEncryper TokenEncryper { protected get; set; }
         #endregion
 
         #region Data
