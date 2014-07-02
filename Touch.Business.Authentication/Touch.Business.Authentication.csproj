@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Touch">
-      <HintPath>..\packages\Touch.1.0.2\lib\Touch.dll</HintPath>
+      <HintPath>..\packages\Touch.1.0.5\lib\Touch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
