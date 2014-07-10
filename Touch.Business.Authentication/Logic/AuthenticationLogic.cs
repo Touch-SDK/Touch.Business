@@ -12,7 +12,7 @@ namespace Touch.Logic
         #region Dependencies
         public IRepositoryProvider RepositoryProvider { protected get; set; }
         public IHashGenerator TokenHashGenerator { protected get; set; }
-        public IEncrypter TokenEncryper { protected get; set; }
+        public IEncrypter TokenEncrypter { protected get; set; }
         #endregion
 
         #region Data
