@@ -54,7 +54,7 @@ namespace Touch.Logic
             var baseString = Encoding.UTF8.GetBytes(token);
             var salt = Encoding.UTF8.GetBytes(Guid.NewGuid().ToString());
 
-            var hash = TokenEncryper.Crypt(baseString, salt);
+            var hash = TokenEncrypter.Crypt(baseString, salt);
             var result = TokenHashGenerator.Generate(hash);
 
             return result;
