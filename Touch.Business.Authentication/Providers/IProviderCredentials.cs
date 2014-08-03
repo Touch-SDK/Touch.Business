@@ -18,5 +18,11 @@ namespace Touch.Providers
         /// API access token.
         /// </summary>
         KeyPair AccessToken { get; set; }
+
+        /// <summary>
+        /// Set the credentials.
+        /// </summary>
+        /// <param name="credentials"></param>
+        void SetCredentials(Credentials credentials);
     }
 }
