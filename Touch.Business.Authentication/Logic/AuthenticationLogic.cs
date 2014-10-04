@@ -16,7 +16,6 @@ namespace Touch.Logic
         #endregion
 
         #region Data
-        protected readonly Random RandomNumber = new Random();
         protected const string RandomCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         #endregion
 
@@ -29,8 +28,10 @@ namespace Touch.Logic
             const int length = 21;
             var buffer = new char[length];
 
+            var random = new Random();
+
             for (var i = 0; i < length; i++)
-                buffer[i] = RandomCharacters[RandomNumber.Next(RandomCharacters.Length)];
+                buffer[i] = RandomCharacters[random.Next(RandomCharacters.Length)];
 
             return new string(buffer);
         }
@@ -68,8 +69,10 @@ namespace Touch.Logic
             const int length = 5;
             var result = new StringBuilder(length);
 
+            var random = new Random();
+
             for (var i = 0; i < length; i++)
-                result.Append(RandomNumber.Next(1, 9));
+                result.Append(random.Next(1, 9));
 
             return result.ToString();
         }
