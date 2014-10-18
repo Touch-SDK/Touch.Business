@@ -27,8 +27,6 @@ namespace Touch.Logic
 
         public abstract void Update(TUser user);
 
-        public abstract string GetPasswordHash(Guid userId);
-
         public abstract TUser GetUserByEmail(string email);
 
         #endregion
