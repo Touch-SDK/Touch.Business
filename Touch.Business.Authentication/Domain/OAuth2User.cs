@@ -22,15 +22,21 @@ namespace Touch.Domain
         public string ClientId { get; set; }
 
         /// <summary>
+        /// Security token.
+        /// </summary>
+        [DataMember(Name = "security_token", Order = 3)]
+        public string SecurityToken { get; set; }
+
+        /// <summary>
         /// Username.
         /// </summary>
-        [DataMember(Name = "username", Order = 3)]
+        [DataMember(Name = "username", Order = 4)]
         public string UserName { get; set; }
 
         /// <summary>
         /// Roles.
         /// </summary>
-        [DataMember(Name = "roles", Order = 4)]
+        [DataMember(Name = "roles", Order = 5)]
         public string[] Roles { get; set; }
     }
 }
