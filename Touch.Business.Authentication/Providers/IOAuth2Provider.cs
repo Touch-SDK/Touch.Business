@@ -4,6 +4,8 @@ namespace Touch.Providers
 {
     public interface IOAuth2Provider
     {
-        OAuth2User AuthenticateUser(string userName, string password, string clientId);
+        bool ValidateUserCredentials(string userName, string password, string clientId);
+
+        OAuth2User GetUser(string userName, string clientId);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Touch.Domain;
+﻿using System;
+using Touch.Domain;
 
 namespace Touch.Providers
 {
@@ -10,18 +11,12 @@ namespace Touch.Providers
         /// <summary>
         /// Active authenticated consumer.
         /// </summary>
+        [Obsolete]
         Credentials ActiveConsumer { get; }
 
         /// <summary>
-        /// Authenticate the provided user.
+        /// Active authenticated user.
         /// </summary>
-        /// <param name="username">Username.</param>
-        /// <param name="credentials">User credentials.</param>
-        void Authenticate(string username, Credentials credentials);
-
-        /// <summary>
-        /// Logout.
-        /// </summary>
-        void Logout();
+        OAuth2User ActiveUser { get; }
     }
 }
