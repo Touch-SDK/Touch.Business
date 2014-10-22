@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{959279BB-9F5A-406C-80A6-2EFC4EE5DB14}</ProjectGuid>
+    <ProjectGuid>{67665346-2435-475E-AF30-A05B5F49EF54}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Touch</RootNamespace>
