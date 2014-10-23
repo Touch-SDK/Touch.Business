@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using Touch.Domain;
-using Touch.Persistence;
 using Touch.Serialization;
 
 namespace Touch.Logic
 {
-    public abstract class AuthenticationLogic : BusinessLogic
+    public abstract class OAuthLogic : BusinessLogic
     {
         #region Dependencies
-        public IRepositoryProvider RepositoryProvider { protected get; set; }
         public IHashGenerator TokenHashGenerator { protected get; set; }
         public IEncrypter TokenEncrypter { protected get; set; }
         #endregion
@@ -83,29 +80,29 @@ namespace Touch.Logic
         /// Get OAuth consumer by its consumer token key.
         /// </summary>
         /// <returns>Consumer object or <c>null</c> if consumer not found.</returns>
-        public abstract Consumer GetConsumer(string consumerToken);
+        public abstract OAuthConsumer GetConsumer(string consumerToken);
 
         /// <summary>
         /// Get an OAuth access token by its token key.
         /// </summary>
         /// <returns>Token object or <c>null</c> if token not found.</returns>
-        public abstract AccessToken GetAccessToken(string token);
+        public abstract OAuthAccessToken GetAccessToken(string token);
 
         /// <summary>
         /// Get an OAuth request token by its token key.
         /// </summary>
         /// <returns>Token object or <c>null</c> if token not found.</returns>
-        public abstract RequestToken GetRequestToken(string token);
+        public abstract OAuthRequestToken GetRequestToken(string token);
 
         /// <summary>
         /// Issue a new OAuth request token.
         /// </summary>
-        public abstract RequestToken IssueRequestToken(string consumerKey, string realm, string callbackUrl = null);
+        public abstract OAuthRequestToken IssueRequestToken(string consumerKey, string realm, string callbackUrl = null);
 
         /// <summary>
         /// Grant a new OAuth access token for the consumer.
         /// </summary>
-        public abstract AccessToken GrantApiAccess(string consumerToken);
+        public abstract OAuthAccessToken GrantApiAccess(string consumerToken);
 
         /// <summary>
         /// Consume the OAuth request token.

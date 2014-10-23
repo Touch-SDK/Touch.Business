@@ -5,14 +5,14 @@ namespace Touch.Domain
     /// <summary>
     /// OAuth key pair.
     /// </summary>
-    [DataContract(Name = "KeyPair")]
-    sealed public class KeyPair
+    [DataContract]
+    sealed public class OAuthKeyPair
     {
         #region .ctor
-        public KeyPair()
+        public OAuthKeyPair()
         {}
 
-        public KeyPair(string key, string secret)
+        public OAuthKeyPair(string key, string secret)
         {
             Key = key;
             Secret = secret;

@@ -33,27 +33,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Domain\AccessToken.cs" />
-    <Compile Include="Domain\Consumer.cs" />
-    <Compile Include="Domain\Credentials.cs" />
-    <Compile Include="Domain\KeyPair.cs" />
+    <Compile Include="Domain\OAuth1\OAuthAccessToken.cs" />
+    <Compile Include="Domain\OAuth1\OAuthConsumer.cs" />
+    <Compile Include="Domain\OAuth1\OAuthCredentials.cs" />
+    <Compile Include="Domain\OAuth1\OAuthKeyPair.cs" />
     <Compile Include="Domain\Membership.cs" />
-    <Compile Include="Domain\OAuth2User.cs" />
-    <Compile Include="Domain\OAuth2Client.cs" />
-    <Compile Include="Domain\OAuth2Key.cs" />
-    <Compile Include="Domain\OAuth2Nonce.cs" />
-    <Compile Include="Domain\Nonce.cs" />
-    <Compile Include="Domain\RequestToken.cs" />
-    <Compile Include="Logic\AuthenticationLogic.cs" />
+    <Compile Include="Domain\OAuth2\OAuth2User.cs" />
+    <Compile Include="Domain\OAuth2\OAuth2Client.cs" />
+    <Compile Include="Domain\OAuth2\OAuth2Key.cs" />
+    <Compile Include="Domain\OAuth2\OAuth2Nonce.cs" />
+    <Compile Include="Domain\OAuth1\OAuthNonce.cs" />
+    <Compile Include="Domain\OAuth1\OAuthRequestToken.cs" />
+    <Compile Include="Logic\OAuthLogic.cs" />
     <Compile Include="Logic\MembershipLogic.cs" />
     <Compile Include="Logic\OAuth2Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\AbstractProviderCredentials.cs" />
-    <Compile Include="Providers\IAuthenticationProvider.cs" />
     <Compile Include="Providers\IOAuth2Provider.cs" />
-    <Compile Include="Providers\IProviderCredentials.cs" />
-    <Compile Include="Providers\ProviderCredentials.cs" />
-    <Compile Include="Providers\ProviderCredentialsBasic.cs" />
+    <Compile Include="Providers\IOAuth2Manager.cs" />
+    <Compile Include="Providers\IOAuthProvider.cs" />
+    <Compile Include="Providers\OAuthProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Touch">

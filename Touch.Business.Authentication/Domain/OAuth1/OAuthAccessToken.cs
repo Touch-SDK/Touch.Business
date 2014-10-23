@@ -4,10 +4,10 @@ using Touch.Persistence;
 namespace Touch.Domain
 {
     /// <summary>
-    /// Access token.
+    /// OAuth access token.
     /// </summary>
-    [DataContract(Name = "ApiAccessToken")]
-    public class AccessToken : Document
+    [DataContract]
+    public class OAuthAccessToken : Document
     {
         /// <summary>
         /// Token.

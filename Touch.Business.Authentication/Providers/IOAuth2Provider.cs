@@ -2,10 +2,14 @@
 
 namespace Touch.Providers
 {
+    /// <summary>
+    /// OAuth2 provider.
+    /// </summary>
     public interface IOAuth2Provider
     {
-        bool ValidateUserCredentials(string userName, string password, string clientId);
-
-        OAuth2User GetUser(string userName, string clientId);
+        /// <summary>
+        /// Currently authenticated OAuth2 user.
+        /// </summary>
+        OAuth2User CurrentUser { get; set; }
     }
 }

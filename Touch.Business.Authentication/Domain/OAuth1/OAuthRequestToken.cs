@@ -4,10 +4,10 @@ using Touch.Persistence;
 namespace Touch.Domain
 {
     /// <summary>
-    /// Request token.
+    /// OAuth request token.
     /// </summary>
-    [DataContract(Name = "ApiRequestToken")]
-    public class RequestToken : Document
+    [DataContract]
+    public class OAuthRequestToken : Document
     {
         /// <summary>
         /// Token.
@@ -18,7 +18,6 @@ namespace Touch.Domain
         /// <summary>
         /// Token status.
         /// </summary>
-        /// <see cref="RequestTokenStatuses"/>
         [DataMember(Name = "status", Order = 2)]
         public string Status { get; set; }
 

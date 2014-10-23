@@ -1,14 +1,13 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 using Touch.Persistence;
 
 namespace Touch.Domain
 {
     /// <summary>
-    /// Consumer.
+    /// OAuth consumer.
     /// </summary>
-    [DataContract(Name = "ApiConsumer")]
-    public class Consumer : Document
+    [DataContract]
+    public class OAuthConsumer : Document
     {
         /// <summary>
         /// Consumer key.
