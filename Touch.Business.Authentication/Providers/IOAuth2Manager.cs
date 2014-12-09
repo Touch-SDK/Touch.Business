@@ -1,4 +1,5 @@
-﻿using Touch.Domain;
+﻿using System;
+using Touch.Domain;
 
 namespace Touch.Providers
 {
@@ -13,9 +14,24 @@ namespace Touch.Providers
         bool ValidateUserCredentials(string userName, string password, string clientId);
 
         /// <summary>
+        /// Create a new user for the given client.
+        /// </summary>
+        /// <param name="clientId">Client ID.</param>
+        /// <returns>New user object.</returns>
+        /// <exception cref="NotSupportedException">User creation is not supported by the client.</exception>
+        OAuth2User CreateUser(string clientId);
+
+        /// <summary>
         /// Get the user by username and client ID.
         /// </summary>
-        /// <returns>User object ir <c>null</c> if user not found.</returns>
+        /// <returns>User object or <c>null</c> if user not found.</returns>
         OAuth2User GetUser(string userName, string clientId);
+
+        /// <summary>
+        /// Get client by ID.
+        /// </summary>
+        /// <param name="clientId">Client ID.</param>
+        /// <returns>Client object or <c>null</c> if client not found.</returns>
+        OAuth2Client GetClient(string clientId);
     }
 }
