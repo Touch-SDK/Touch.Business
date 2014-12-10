@@ -14,18 +14,18 @@ namespace Touch.Providers
         bool ValidateUserCredentials(string userName, string password, string clientId);
 
         /// <summary>
-        /// Create a new user for the given client.
+        /// Get user for the given ticket.
         /// </summary>
+        /// <param name="token">Ticket token.</param>
         /// <param name="clientId">Client ID.</param>
-        /// <returns>New user object.</returns>
-        /// <exception cref="NotSupportedException">User creation is not supported by the client.</exception>
-        OAuth2User CreateUser(string clientId);
+        /// <returns>User object or <c>null</c> if user not found.</returns>
+        OAuth2User GetUserByTicket(string token, string clientId);
 
         /// <summary>
         /// Get the user by username and client ID.
         /// </summary>
         /// <returns>User object or <c>null</c> if user not found.</returns>
-        OAuth2User GetUser(string userName, string clientId);
+        OAuth2User GetUserByUsername(string userName, string clientId);
 
         /// <summary>
         /// Get client by ID.
@@ -33,5 +33,13 @@ namespace Touch.Providers
         /// <param name="clientId">Client ID.</param>
         /// <returns>Client object or <c>null</c> if client not found.</returns>
         OAuth2Client GetClient(string clientId);
+
+        /// <summary>
+        /// Consume user ticket.
+        /// </summary>
+        /// <param name="token">Ticket token.</param>
+        /// <param name="clientId">Client ID.</param>
+        /// <exception cref="IndexOutOfRangeException">Missing ticket of client.</exception>
+        void ConsumeUserTicket(string token, string clientId);
     }
 }
