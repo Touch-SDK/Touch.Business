@@ -4,10 +4,10 @@ using Touch.Persistence;
 namespace Touch.Domain
 {
     /// <summary>
-    /// OAuth2 user.
+    /// OAuth2 API access.
     /// </summary>
     [DataContract]
-    public class OAuth2User : Document
+    public class OAuth2Access : Document
     {
         /// <summary>
         /// Token.
@@ -22,21 +22,15 @@ namespace Touch.Domain
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Security token.
+        /// Issue date.
         /// </summary>
-        [DataMember(Name = "security_token", Order = 3)]
-        public string SecurityToken { get; set; }
-
-        /// <summary>
-        /// Username.
-        /// </summary>
-        [DataMember(Name = "username", Order = 4)]
-        public string UserName { get; set; }
+        [DataMember(Name = "issue_date", Order = 3)]
+        public string IssueDate { get; set; }
 
         /// <summary>
         /// Roles.
         /// </summary>
-        [DataMember(Name = "roles", Order = 5)]
+        [DataMember(Name = "roles", Order = 4)]
         public string[] Roles { get; set; }
     }
 }

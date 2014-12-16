@@ -14,18 +14,20 @@ namespace Touch.Providers
         bool ValidateUserCredentials(string userName, string password, string clientId);
 
         /// <summary>
-        /// Get user for the given ticket.
+        /// Grant API access for the given user with client ID.
         /// </summary>
-        /// <param name="token">Ticket token.</param>
+        /// <param name="userName">Username.</param>
         /// <param name="clientId">Client ID.</param>
-        /// <returns>User object or <c>null</c> if user not found.</returns>
-        OAuth2User GetUserByTicket(string token, string clientId);
+        /// <exception cref="NotSupportedException">Username access grant is not supported by the client.</exception>
+        OAuth2Access GrantAccess(string userName, string clientId);
 
         /// <summary>
-        /// Get the user by username and client ID.
+        /// Get API access object for the given ID.
         /// </summary>
-        /// <returns>User object or <c>null</c> if user not found.</returns>
-        OAuth2User GetUserByUsername(string userName, string clientId);
+        /// <param name="accessId">Access ID.</param>
+        /// <param name="clientId">Client ID.</param>
+        /// <returns>Access object or <c>null</c> if no valid access found.</returns>
+        OAuth2Access GetAccess(string accessId, string clientId);
 
         /// <summary>
         /// Get client by ID.
@@ -33,13 +35,5 @@ namespace Touch.Providers
         /// <param name="clientId">Client ID.</param>
         /// <returns>Client object or <c>null</c> if client not found.</returns>
         OAuth2Client GetClient(string clientId);
-
-        /// <summary>
-        /// Consume user ticket.
-        /// </summary>
-        /// <param name="token">Ticket token.</param>
-        /// <param name="clientId">Client ID.</param>
-        /// <exception cref="IndexOutOfRangeException">Missing ticket of client.</exception>
-        void ConsumeUserTicket(string token, string clientId);
     }
 }

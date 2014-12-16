@@ -32,5 +32,11 @@ namespace Touch.Domain
         /// </summary>
         [DataMember(Name = "callback", Order = 4)]
         public string Callback { get; set; }
+
+        /// <summary>
+        /// Roles.
+        /// </summary>
+        [DataMember(Name = "roles", Order = 5)]
+        public string[] Roles { get; set; }
     }
 }

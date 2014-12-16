@@ -8,8 +8,8 @@ namespace Touch.Providers
     public interface IOAuth2Provider
     {
         /// <summary>
-        /// Currently authenticated OAuth2 user.
+        /// Currently active OAuth2 API access.
         /// </summary>
-        OAuth2User CurrentUser { get; set; }
+        OAuth2Access ActiveAccess { get; set; }
     }
 }

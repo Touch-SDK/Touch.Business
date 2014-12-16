@@ -16,22 +16,16 @@ namespace Touch.Domain
         public override string HashKey { get; set; }
 
         /// <summary>
-        /// Nonce.
-        /// </summary>
-        [DataMember(Name = "nonce", Order = 2)]
-        public string Nonce { get; set; }
-
-        /// <summary>
         /// Context.
         /// </summary>
-        [DataMember(Name = "context", Order = 3)]
+        [DataMember(Name = "context", Order = 2)]
         public string Context { get; set; }
 
         /// <summary>
         /// Issue date.
         /// </summary>
         /// <see cref="DocumentUtil"/>
-        [DataMember(Name = "issue_date", Order = 4)]
+        [DataMember(Name = "issue_date", Order = 3)]
         public string IssueDate { get; set; }
     }
 }

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Domain\OAuth2User.cs" />
+    <Compile Include="Domain\OAuth2Access.cs" />
     <Compile Include="Domain\OAuth2Client.cs" />
     <Compile Include="Domain\OAuth2Key.cs" />
     <Compile Include="Domain\OAuth2Nonce.cs" />
