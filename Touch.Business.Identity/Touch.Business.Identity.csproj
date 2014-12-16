@@ -51,6 +51,7 @@
     <Compile Include="Logic\IIdentityUserLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IdentityProvider.cs" />
+    <Compile Include="Providers\UserStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
