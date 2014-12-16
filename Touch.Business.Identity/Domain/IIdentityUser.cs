@@ -8,6 +8,8 @@ namespace Touch.Domain
     {
         new Guid Id { get; }
 
+        new string UserName { get; set; }
+
         string Email { get; set; }
 
         string PasswordHash { get; set; }

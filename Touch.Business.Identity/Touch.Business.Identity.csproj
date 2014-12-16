@@ -46,10 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\IIdentityUser.cs" />
-    <Compile Include="Logic\IdentityRoleLogic.cs" />
-    <Compile Include="Logic\IdentityClaimLogic.cs" />
-    <Compile Include="Logic\IdentityUserLogic.cs" />
+    <Compile Include="Logic\IIdentityRoleLogic.cs" />
+    <Compile Include="Logic\IIdentityClaimLogic.cs" />
+    <Compile Include="Logic\IIdentityUserLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IdentityProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

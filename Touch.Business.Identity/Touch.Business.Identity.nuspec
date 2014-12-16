@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Touch.Business.Identity</id>
+        <version>1.0.0</version>
+        <authors>Artem Abashev</authors>
+        <projectUrl>https://github.com/Touch-SDK/Touch.Business</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Identity business logic for Touch SDK.</description>
+        <dependencies>
+            <dependency id="Touch" version="1.0.16" />
+            <dependency id="Microsoft.AspNet.Identity.Core" version="2.1.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\Touch.Business.Identity.dll" target="lib\Touch.Business.Identity.dll" />
+        <file src="bin\Release\Touch.Business.Identity.pdb" target="lib\Touch.Business.Identity.pdb" />
+    </files>
+</package>
