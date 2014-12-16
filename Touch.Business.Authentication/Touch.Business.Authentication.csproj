@@ -37,7 +37,8 @@
     <Compile Include="Domain\OAuth2Client.cs" />
     <Compile Include="Domain\OAuth2Key.cs" />
     <Compile Include="Domain\OAuth2Nonce.cs" />
-    <Compile Include="Logic\IOAuth2Logic.cs" />
+    <Compile Include="Logic\IOAuth2NonceLogic.cs" />
+    <Compile Include="Logic\IOAuth2KeyLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IOAuth2Provider.cs" />
     <Compile Include="Providers\IOAuth2Manager.cs" />

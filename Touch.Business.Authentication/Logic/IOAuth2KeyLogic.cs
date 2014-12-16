@@ -3,12 +3,8 @@ using Touch.Domain;
 
 namespace Touch.Logic
 {
-    public interface IOAuth2Logic
+    public interface IOAuth2KeyLogic
     {
-        OAuth2Client GetClient(string clientId);
-
-        void StoreNonce(OAuth2Nonce nonce);
-
         OAuth2Key GetKey(string bucket, string handle);
 
         IEnumerable<OAuth2Key> GetKeys(string bucket);
