@@ -1,4 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Touch.Persistence;
 
 namespace Touch.Domain
@@ -9,6 +11,11 @@ namespace Touch.Domain
     [DataContract]
     public class OAuth2Access : Document
     {
+        public OAuth2Access()
+        {
+            ExtraData = new Dictionary<string, string>();
+        }
+
         /// <summary>
         /// Token.
         /// </summary>
@@ -28,9 +35,21 @@ namespace Touch.Domain
         public string IssueDate { get; set; }
 
         /// <summary>
+        /// Expiration date.
+        /// </summary>
+        [DataMember(Name = "expiration_date", Order = 4)]
+        public string ExpirationDate { get; set; }
+
+        /// <summary>
         /// Roles.
         /// </summary>
-        [DataMember(Name = "roles", Order = 4)]
+        [DataMember(Name = "roles", Order = 5)]
         public string[] Roles { get; set; }
+
+        /// <summary>
+        /// Extra data.
+        /// </summary>
+        [DataMember(Name = "extra_data", Order = 6)]
+        public IDictionary<string, string> ExtraData { get; set; }
     }
 }

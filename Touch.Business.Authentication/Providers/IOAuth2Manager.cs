@@ -35,5 +35,11 @@ namespace Touch.Providers
         /// <param name="clientId">Client ID.</param>
         /// <returns>Client object or <c>null</c> if client not found.</returns>
         OAuth2Client GetClient(string clientId);
+
+        /// <summary>
+        /// Get the lifespan for given API access.
+        /// </summary>
+        /// <returns><c>TimeSpan</c> value, <c>TimeSpan.MaxValue</c> when access has infinite lifespan.</returns>
+        TimeSpan GetAccessLifeSpan(OAuth2Access access);
     }
 }

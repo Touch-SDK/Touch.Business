@@ -28,15 +28,21 @@ namespace Touch.Domain
         public bool IsPublic { get; set; }
 
         /// <summary>
+        /// Access life time in seconds.
+        /// </summary>
+        [DataMember(Name = "access_window", Order = 4)]
+        public int AccessWindow { get; set; }
+
+        /// <summary>
         /// Callback URL.
         /// </summary>
-        [DataMember(Name = "callback", Order = 4)]
+        [DataMember(Name = "callback", Order = 5)]
         public string Callback { get; set; }
 
         /// <summary>
         /// Roles.
         /// </summary>
-        [DataMember(Name = "roles", Order = 5)]
+        [DataMember(Name = "roles", Order = 6)]
         public string[] Roles { get; set; }
     }
 }
