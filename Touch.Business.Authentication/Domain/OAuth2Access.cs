@@ -35,21 +35,15 @@ namespace Touch.Domain
         public string IssueDate { get; set; }
 
         /// <summary>
-        /// Expiration date.
-        /// </summary>
-        [DataMember(Name = "expiration_date", Order = 4)]
-        public string ExpirationDate { get; set; }
-
-        /// <summary>
         /// Roles.
         /// </summary>
-        [DataMember(Name = "roles", Order = 5)]
+        [DataMember(Name = "roles", Order = 4)]
         public string[] Roles { get; set; }
 
         /// <summary>
         /// Extra data.
         /// </summary>
-        [DataMember(Name = "extra_data", Order = 6)]
+        [DataMember(Name = "extra_data", Order = 5)]
         public IDictionary<string, string> ExtraData { get; set; }
     }
 }

@@ -40,6 +40,7 @@
     <Compile Include="Logic\IOAuth2NonceLogic.cs" />
     <Compile Include="Logic\IOAuth2KeyLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IOAuth2CredentialsProvider.cs" />
     <Compile Include="Providers\IOAuth2Provider.cs" />
     <Compile Include="Providers\IOAuth2Manager.cs" />
   </ItemGroup>
