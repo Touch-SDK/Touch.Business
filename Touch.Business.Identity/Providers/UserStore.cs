@@ -15,7 +15,8 @@ namespace Touch.Providers
         IUserLoginStore<TUser, Guid>,
         IUserRoleStore<TUser, Guid>,
         IUserPasswordStore<TUser, Guid>,
-        IUserSecurityStampStore<TUser, Guid>
+        IUserSecurityStampStore<TUser, Guid>,
+        IUserTokenProvider<TUser, Guid>
         where TUser : class, IIdentityUser
     {
         #region Dependencies
@@ -251,6 +252,34 @@ namespace Touch.Providers
             user.SecurityStamp = stamp;
 
             return Task.FromResult(0);
+        }
+        #endregion
+
+        #region IUserTokenProvider members
+        public Task<string> GenerateAsync(string purpose, UserManager<TUser, Guid> manager, TUser user)
+        {
+            var token = IdentityUserLogic.GenerateToken(purpose, user);
+
+            return Task.FromResult(token);
+        }
+
+        public Task<bool> IsValidProviderForUserAsync(UserManager<TUser, Guid> manager, TUser user)
+        {
+            return Task.FromResult(true);
+        }
+
+        public Task NotifyAsync(string token, UserManager<TUser, Guid> manager, TUser user)
+        {
+            IdentityUserLogic.SendTokenNotification(token, user);
+
+            return Task.FromResult<object>(null);
+        }
+
+        public Task<bool> ValidateAsync(string purpose, string token, UserManager<TUser, Guid> manager, TUser user)
+        {
+            var result = IdentityUserLogic.ValidateToken(purpose, token, user);
+
+            return Task.FromResult(result);
         }
         #endregion
 

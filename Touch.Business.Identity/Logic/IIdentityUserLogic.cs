@@ -27,5 +27,11 @@ namespace Touch.Logic
         void Update(TUser user);
 
         TUser GetUserByEmail(string email);
+
+        string GenerateToken(string purpose, TUser user);
+
+        void SendTokenNotification(string token, TUser user);
+
+        bool ValidateToken(string purpose, string token, TUser user);
     }
 }
