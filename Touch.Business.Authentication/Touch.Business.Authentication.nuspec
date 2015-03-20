@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Touch.Business.Authentication</id>
-        <version>1.0.18</version>
+        <version>1.0.19</version>
         <authors>Artem Abashev</authors>
         <projectUrl>https://github.com/Touch-SDK/Touch.Business</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Authentication business logic for Touch SDK.</description>
         <dependencies>
-            <dependency id="Touch" version="1.0.5" />
+            <dependency id="Touch" version="1.0.23" />
         </dependencies>
     </metadata>
     <files>
